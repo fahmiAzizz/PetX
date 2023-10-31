@@ -7,9 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'cat': "url('./src/assets/cat-bg.jpg')",
-        'dog': "url('./src/assets/dog-bg.jpg')",
-        'dog2': "url('./src/assets/dog-bg2.jpg')",
+        'cat': "url('./src/assets/catbg.jpg')",
       }
     },
   },

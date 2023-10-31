@@ -1,6 +1,6 @@
 import React from 'react'
 import dog from '../assets/dog5.png'
-import '../app.css'
+
 
 const About = () => {
     return (
