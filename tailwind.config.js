@@ -8,8 +8,6 @@ export default {
     extend: {
       backgroundImage: {
         'cat': "url('./src/assets/cat-bg.jpg')",
-        'dog': "url('./src/assets/dog-bg.jpg')",
-        'dog2': "url('./src/assets/dog-bg2.jpg')",
       }
     },
   },
