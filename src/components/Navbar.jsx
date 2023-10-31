@@ -8,6 +8,9 @@ import cn from 'clsx'
 const Navbar = () => {
 
     const [nav, setNav] = useState(false);
+    const closeSidebar = () => {
+        setNav(false);
+    }
 
     const links = [
         {
@@ -35,7 +38,7 @@ const Navbar = () => {
     const [hasScrolled, setHasScrolled] = useState(false)
     useEffect(() => {
         const handleScroll = throttle(() => {
-            const offset = 500
+            const offset = 50
             const scrolled = document.documentElement.scrollTop > offset
 
             // if (hasScrolled !== scrolled) 
@@ -56,12 +59,17 @@ const Navbar = () => {
                     'bg-black opacity-90': hasScrolled
                 }
             )}>
-            <div className='text-5xl logo-font'>
-                Logos
+            <div className={cn(
+                'text-5xl logo-font ',
+                {
+                    'text-yellow-400': hasScrolled
+                }
+            )}>
+                PetX
             </div>
             <ul className='hidden md:flex gap-10'>
                 {links.map(link => (
-                    <a key={link.id} href={link.link} className='hover:text-yellow-400 hover:scale-110 duration-200'>{link.title}</a>
+                    <a key={link.id} href={link.link} className='hover:text-yellow-400 hover:scale-110 duration-200 title-font font-semibold'>{link.title}</a>
                 ))}
             </ul>
 
@@ -73,7 +81,7 @@ const Navbar = () => {
             {nav && (
                 <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black bg-opacity-90'>
                     {links.map(link => (
-                        <li key={link.id} className='pz-4 cursor-pointer capitalize py-6 text-3xl'>{link.link}</li>
+                        <li key={link.id} onClick={closeSidebar} className='pz-4 cursor-pointer capitalize py-6 text-3xl'><a href={link.link}>{link.title}</a></li>
                     ))}
                 </ul>
             )}

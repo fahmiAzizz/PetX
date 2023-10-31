@@ -3,10 +3,10 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import { FiArrowLeftCircle, FiArrowRightCircle } from 'react-icons/fi'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import dog1 from '../assets/dog1.png'
-import dog2 from '../assets/dog2.png'
+import cat5 from '../assets/cat5.png'
 import dog3 from '../assets/dog3.png'
 import dog4 from '../assets/dog4.png'
-import dog5 from '../assets/dog5.png'
+import cat6 from '../assets/cat6.png'
 
 
 const Carousel = () => {
@@ -15,27 +15,27 @@ const Carousel = () => {
         {
             id: 0,
             gambar: dog1,
-            nama: "anjing"
+            nama: "Chooper"
         },
         {
             id: 1,
-            gambar: dog2,
-            nama: "anjing"
+            gambar: cat5,
+            nama: "Max"
         },
         {
             id: 2,
             gambar: dog3,
-            nama: "anjing"
+            nama: "Duke"
         },
         {
             id: 3,
             gambar: dog4,
-            nama: "anjing"
+            nama: "Browny"
         },
         {
             id: 4,
-            gambar: dog5,
-            nama: "anjing"
+            gambar: cat6,
+            nama: "Kotlin"
         },
     ]
 
@@ -86,8 +86,8 @@ const Carousel = () => {
                                 </Slide>
                             ))}
                         </Slider>
-                        <ButtonBack className='absolute left-5 lg:left-36 bottom-1/2'><FiArrowLeftCircle size={30} /></ButtonBack>
-                        <ButtonNext className='absolute right-5 lg:right-36 top-[45%]'><FiArrowRightCircle size={30} /></ButtonNext>
+                        <ButtonBack className='absolute hover:text-yellow-400 hover:scale-110 left-5 lg:left-36  bottom-[34%]'><FiArrowLeftCircle size={30} /></ButtonBack>
+                        <ButtonNext className='absolute hover:text-yellow-400 hover:scale-110 right-5 lg:right-36 top-[60%]'><FiArrowRightCircle size={30} /></ButtonNext>
                     </div>
                 </CarouselProvider>
             </div>
